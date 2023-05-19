@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .containerScore {
+      margin-left: 400px;
+    }
+    input {
+      width: 750px;
+      height: 30px;
+      margin-top: 20px;
+      border: 1px solid rgb(161, 156, 156);
+      border-radius: 3px;
+      outline: none;
+    }
+
+    input:hover {
+      border: 1px solid rgba(59, 144, 248, 0.68);
+      box-shadow: 0px 0px 9px 0px rgba(74, 180, 255, 0.68);
+    }
+
+    .text {
+      display: none;
+      background-color: rgb(239, 182, 182);
+      height: 50px;
+      width: 755px;
+      border-radius: 5px;
+    }
+    .text p {
+      color: rgb(94, 19, 19);
+      font-size: larger;
+      padding: 15px 15px;
+      font-weight: 500;
+    }
+
+    .create {
+      background-color: rgb(32, 107, 226);
+      color: rgb(255, 255, 255);
+      border: none;
+      margin-top: 20px;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    .create:hover {
+      background-color: rgb(27, 100, 218);
+      box-shadow: 0px 3px 15px 0px rgba(59, 148, 255, 0.83);
+    }
+  </style>
+  <body>
+    <div class="containerScore">
+      <h1>Score keeper</h1>
+      <input
+        type="text"
+        placeholder="Enter player name"
+        id="player1"
+        value=""
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="Enter player name"
+        id="player2"
+        value=""
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="Enter player name"
+        id="player3"
+        value=""
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="Enter player name"
+        id="player4"
+        value=""
+      />
+      <br />
+      <div class="text">
+        <!-- <p>Plase input player game !!!</p> -->
+      </div>
+      <button class="create" onclick="handleCreate()">Create Game</button>
+    </div>
+    <script>
+      function handleCreate() {
+        let allInputsValid = true;
+        const player1Input = document.getElementById("player1").value.trim();
+        const player2Input = document.getElementById("player2").value.trim();
+        const player3Input = document.getElementById("player3").value.trim();
+        const player4Input = document.getElementById("player4").value.trim();
+        if (player1Input === "") {
+          document.querySelector(".text").innerHTML =
+            "<p>Plase input player game !!!</p>";
+            document.querySelector(".text").style.display = "block";
+          allInputsValid = false;
+        }
+        if (player2Input === "") {
+          document.querySelector(".text").innerHTML =
+            "<p>Plase input player game !!!</p>";
+            document.querySelector(".text").style.display = "block";
+          allInputsValid = false;
+        }
+        if (player3Input === "") {
+          document.querySelector(".text").innerHTML =
+            "<p>Plase input player game !!!</p>";
+            document.querySelector(".text").style.display = "block";
+          allInputsValid = false;
+        }
+        if (player4Input === "") {
+          document.querySelector(".text").innerHTML =
+            "<p>Plase input player game !!!</p>";
+            document.querySelector(".text").style.display = "block";
+          allInputsValid = false;
+        }
+
+        if (allInputsValid) {
+          // All player names are valid, proceed to create the game
+        // console.log("Game created!");
+        window.location.href= "http://127.0.0.1:3000/player"
+        }
+      }
+    </script>
+  </body>
+</html>

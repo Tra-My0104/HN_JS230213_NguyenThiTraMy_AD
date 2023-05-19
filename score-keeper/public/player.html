@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .table {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .tdName{
+        height: 50px;
+        font-weight: 800;
+        font-size: larger;
+    }
+
+    .tdScores{
+        height: 50px;
+        font-weight: 800;
+        font-size: larger;
+        background-color: rgb(0, 127, 246);
+        color: #ffffff;
+    }
+
+    .inputNumber{
+        height: 70px;
+        font-size: larger;
+        font-weight: 700;
+    }
+
+    .inputNumber input{
+        outline: none;
+    }
+
+    .inputNumber input:hover{
+        border: 1px solid rgba(59, 144, 248, 0.68);
+        box-shadow: 0px 0px 9px 0px rgba(74,180,255,0.68);
+    }
+
+    .addBtn {
+        background-color: rgb(32, 107, 226);
+        color: rgb(255, 255, 255);
+        border: none;
+        margin-top: 20px;
+        height: 40px;
+        border-radius: 5px;
+        width: 100px;
+    }
+    .addBtn:hover{
+        background-color: rgb(27, 100, 218);
+        box-shadow: 0px 3px 15px 0px rgba(59,148,255,0.83);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <table class="table">
+        <tr class="tdName">
+          <td>#</td>
+          <td>Minh Cường</td>
+          <td>Thiên Phú</td>
+          <td>Xuân Bách</td>
+          <td>Mạnh Hùng</td>
+        </tr>
+        <tr class="tdScores">
+          <td>Sun of scores(0)</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr class="inputNumber">
+          <td>Round 1</td>
+          <td><input type="number" placeholder="0"/></td>
+          <td><input type="number" placeholder="0"/></td>
+          <td><input type="number" placeholder="0"/></td>
+          <td><input type="number" placeholder="0"/></td>
+        </tr>
+    </table>
+    <hr>
+
+      <button class="addBtn">Add round</button>
+    </div>
+  </body>
+</html>
